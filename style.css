@@ -1,0 +1,451 @@
+/* EventSync - Enhanced style.css */
+
+:root {
+  --primary: #fffdfeef;
+  --secondary: #e23a99;
+  --accent: #9ca7aa;
+  --bg: #eef1f7;
+  --text: #222;
+  --radius: 14px;
+  --shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+  --highlight: #d2be72;
+  --gradient: linear-gradient(135deg, #0073ff, #ff0073fb);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+body {
+  background-color: var(--bg);
+  color: var(--text);
+  line-height: 1.7;
+  font-size: 16px;
+}
+body {
+  background-image: url('https://thumbs.dreamstime.com/b/abstract-pink-blue-network-connection-digital-technology-background-futuristic-glowing-lines-nodes-particles-create-387382272.jpg');
+  background-size: cover;
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  color: var(--text);
+  font-size: 16px;
+  line-height: 1.7;
+}
+
+
+header {
+  background: var(--gradient);
+  color: white;
+  padding: 1.2rem 2rem;
+  box-shadow: var(--shadow);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+header h1 {
+  margin-bottom: 0.5rem;
+  font-size: 1.8rem;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+nav ul li a {
+  color: white;
+  text-decoration: none;
+  font-weight: 600;
+  padding: 0.5rem 1rem;
+  border-radius: var(--radius);
+  transition: background 0.3s ease, transform 0.3s;
+}
+
+nav ul li a:hover {
+  background-color: rgba(255, 255, 255, 0.2);
+  transform: scale(1.05);
+}
+
+main {
+  padding: 3rem 2rem;
+}
+
+.hero {
+  background: var(--gradient);
+  padding: 3rem;
+  border-radius: var(--radius);
+  margin-bottom: 3rem;
+  text-align: center;
+  color: white;
+  box-shadow: var(--shadow);
+  position: relative;
+  overflow: hidden;
+}
+.hero {
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.6)),
+              url('https://img.freepik.com/freelights-background_52683-66030.jpg?semt=ais_hybrid&w=740') center/cover no-repeat;
+  
+}
+
+
+
+.hero::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url('https://www.transparenttextures.com/patterns/cubes.png');
+  opacity: 0.05;
+  z-index: 0;
+}
+
+.hero h2 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+  position: relative;
+  z-index: 1;
+}
+
+.hero p {
+  font-size: 1.2rem;
+  position: relative;
+  z-index: 1;
+}
+
+
+.upcoming {
+  margin-top: 2rem;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);  
+  gap: 2rem;                              
+}
+
+
+
+.upcoming h3 {
+  font-size: 2rem;
+  color: var(--primary);
+  margin-bottom: 1.5rem;
+  border-bottom: 3px solid var(--accent);
+  padding-bottom: 0.5rem;
+  grid-column: 1/-1;
+}
+.event-img {
+  width: 90%;
+  height: auto;
+  border-radius: var(--radius);
+  margin-bottom: 1rem;
+  box-shadow: var(--shadow);
+}
+
+
+.event-card {
+  background-color: #b3a3ce;
+  border-radius: var(--radius);
+  padding: 1.5rem 2rem;
+  margin-bottom: 1.5rem;
+  box-shadow: var(--shadow);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  border-left: 5px solid var(--secondary);
+  position: relative;
+}
+
+.event-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 12px 25px rgba(0, 0, 0, 0.12);
+}
+
+.event-card h4 {
+  font-size: 1.5rem;
+  color: var(--secondary);
+  margin-bottom: 0.5rem;
+}
+
+.event-card p {
+  margin-bottom: 1rem;
+  font-size: 1rem;
+  color: #444;
+}
+
+.event-card a {
+  text-decoration: none;
+  color: rgb(245, 242, 244);
+  background-color: var(--secondary);
+  font-weight: 500;
+  padding: 0.5rem 1rem;
+  border-radius: var(--radius);
+  transition: background-color 0.3s;
+  display: inline-block;
+}
+
+.event-card a:hover {
+  background-color: var(--secondary);
+}
+
+.form-card {
+  background: white;
+  padding: 2rem;
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  max-width: 500px;
+  margin: 0 auto;
+  border-left: 6px solid var(--primary);
+}
+
+form label {
+  display: block;
+  margin-bottom: 1rem;
+  font-weight: 500;
+}
+
+form input,
+form select {
+  width: 100%;
+  padding: 0.6rem 1rem;
+  margin-top: 0.4rem;
+  border-radius: var(--radius);
+  border: 1px solid #ccc;
+  font-size: 1rem;
+  transition: border-color 0.3s ease;
+}
+
+form input:focus,
+form select:focus {
+  border-color: var(--primary);
+  outline: none;
+}
+
+form button {
+  background-color: var(--secondary);
+  color: rgb(249, 241, 249);
+  font-weight: 600;
+  padding: 0.75rem 1.5rem;
+  border: none;
+  border-radius: var(--radius);
+  cursor: pointer;
+  transition: background-color 0.3s;
+  margin-top: 1rem;
+}
+
+form button:hover {
+  background-color: var(--secondary);
+}
+
+.form-section {
+  background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
+              url('https://images.unsplash.com/photo-1534751516642-a1af1ef26a6b?ixlib=rb-4.0.3&auto=format&fit=crop&w=1950&q=80')
+              center/cover no-repeat;
+  padding: 4rem 2rem;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.form-card {
+  background: white;
+  padding: 2.5rem;
+  border-radius: var(--radius);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+  max-width: 500px;
+  width: 100%;
+  border-left: 8px solid var(--primary);
+  animation: fadeIn 0.6s ease;
+}
+
+.form-card h2 {
+  text-align: center;
+  margin-bottom: 1.5rem;
+  color: var(--primary);
+}
+
+form label {
+  display: block;
+  margin-bottom: 1rem;
+  font-weight: 500;
+  color: #333;
+}
+
+form input,
+form select {
+  width: 100%;
+  padding: 0.6rem 1rem;
+  margin-top: 0.4rem;
+  border-radius: var(--radius);
+  border: 1px solid #ccc;
+  font-size: 1rem;
+  transition: border-color 0.3s ease;
+  background-color: #f9f9f9;
+}
+
+form input:focus,
+form select:focus {
+  border-color: var(--primary);
+  outline: none;
+}
+
+form button {
+  background-color: var(--secondary);
+  color: white;
+  font-weight: 600;
+  padding: 0.75rem 1.5rem;
+  border: none;
+  border-radius: var(--radius);
+  cursor: pointer;
+  transition: background-color 0.3s;
+  margin-top: 1rem;
+  width: 100%;
+}
+
+form button:hover {
+  background-color: var(--secondary);
+}
+
+.events-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  margin-top: 2rem;
+}
+.event-details {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.event-info-card {
+  background: white;
+  border-left: 6px solid var(--primary);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  padding: 2rem;
+  transition: transform 0.3s ease;
+}
+
+.event-info-card:hover {
+  transform: translateY(-6px);
+}
+
+.btn-primary {
+  text-decoration: none;
+  display: inline-block;
+  margin-top: 1rem;
+  background-color: var(--secondary);
+  color: white;
+  padding: 0.6rem 1.2rem;
+  border-radius: var(--radius);
+  font-weight: 600;
+  transition: background-color 0.3s ease;
+}
+
+.btn-primary:hover {
+  background-color: var(--primary);
+}
+
+
+
+/* Optional animation */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(15px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+
+/* Schedule Page Styles */
+main h2 {
+  text-align: center;
+  color: var(--primary);
+  margin: 2rem 0 1.5rem;
+  font-size: 2rem;
+}
+
+/* Table Styling */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  background-color: white;
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  overflow: hidden;
+  margin: 0 auto;
+  max-width: 1000px;
+}
+
+thead {
+  background: var(--gradient);
+  color: white;
+}
+
+th, td {
+  padding: 1rem;
+  text-align: center;
+  font-size: 1rem;
+  border-bottom: 1px solid #ddd;
+}
+
+tbody tr:hover {
+  background-color: var(--accent);
+  color: black;
+}
+
+tbody td {
+  color: var(--text);
+}
+
+@media (max-width: 768px) {
+  table {
+    font-size: 0.85rem;
+  }
+
+  th, td {
+    padding: 0.75rem;
+  }
+}
+@media (max-width: 768px) {
+  .upcoming {
+    grid-template-columns: 1fr;    
+  }
+}
+
+
+
+footer {
+  text-align: center;
+  padding: 1.5rem;
+  background: var(--gradient);
+  color: white;
+  margin-top: 3rem;
+  border-top: 4px solid var(--secondary);
+  font-size: 0.9rem;
+}
+
+@media (max-width: 768px) {
+  nav ul {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .hero h2 {
+    font-size: 2rem;
+  }
+
+  .event-card {
+    padding: 1rem;
+  }
+}

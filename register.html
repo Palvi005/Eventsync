@@ -1,0 +1,70 @@
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>EventSync | Register</title>
+  <link rel="stylesheet" href="style.css">
+  <script defer src="register.js"></script>
+</head>
+<body>
+ <header>
+    <h1>EventSync</h1>
+    <nav>
+      <ul>
+        <li><a href="masterpage.html">Home</a></li>
+        <li><a href="events.html">Events</a></li>
+        <li><a href="event-details.html">Event Details</a></li>
+        <li><a href="register.html">Register</a></li>
+        <li><a href="calculator.html">Fee Calculator</a></li>
+        <li><a href="schedule.html">Schedule</a></li>
+      </ul>
+    </nav>
+  </header>
+    <main>
+    <h2 style="text-align: center; color: var(--primary); margin-bottom: 1.5rem;">Event Registration</h2></h2>
+    <section class="form-section">
+     <div class="form-card">
+      <form id="regForm">
+      <label>Name
+        <input type="text" id="name" placeholder="Enter the name of participant" required>
+      </label>
+      <label>Email
+        <input type="email" id="email" placeholder="Enter email account" required>
+      </label>
+      <label>Department
+        <input type="text" id="dept" placeholder="Enter department" required>
+      </label>
+      <label>Select Event
+        <select id="eventSelect"  required>
+          <option value="">--Choose Event--</option>
+          <option value="HackX 2025">HackX 2025</option>
+          <option value="CodeStorm Workshop">CodeStorm Workshop</option>
+          <option value="InnovateTech Seminar">InnovateTech Seminar</option>
+          <option value="TechFest 2025">TechFest 2025</option>
+        </select>
+      </label>
+      <label>Team Name (optional)
+        <input type="text" id="team" placeholder="Enter the team name">
+      </label>
+      <button type="submit">Register</button>
+    </form>
+    </div>
+    </section>
+  </main>
+  <footer>
+    <p>&copy; 2025 EventSync</p>
+  </footer>
+
+  
+
+
+
+  <script>
+    document.getElementById('regForm').addEventListener('submit', function(e){
+      e.preventDefault();
+      alert('🎉 Registered successfully!\nSee you at ' + document.getElementById('eventSelect').value + '.');
+      this.reset();
+    });
+  </script>
+</body>
+</html>

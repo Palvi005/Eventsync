@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>EventSync | Fee Calculator</title>
+  <link rel="stylesheet" href="style.css">
+  <script defer src="calculator.js"></script>
+</head>
+<body>
+  <header>
+    <h1>EventSync</h1>
+    <nav>
+      <ul>
+        <li><a href="masterpage.html">Home</a></li>
+        <li><a href="events.html">Events</a></li>
+        <li><a href="event-details.html">Event Details</a></li>
+        <li><a href="register.html">Register</a></li>
+        <li><a href="calculator.html">Fee Calculator</a></li>
+        <li><a href="schedule.html">Schedule</a></li>
+      </ul>
+    </nav>
+  </header>
+  <>
+    <h2 style="text-align: center; color: var(--primary); margin-bottom: 1.5rem;">Event Fee Calculator</h2>
+    <section class="form-section">
+     <div class="form-card">
+    <form id="calcForm">
+      <label>Select Event
+        <select id="calcEvent" required>
+          <option value="" data-fee="0">--Choose Event--</option>
+          <option value="HackX 2025" data-fee="500">HackX 2025 (₹500)</option>
+          <option value="CodeStorm Workshop" data-fee="300">CodeStorm Workshop (₹300)</option>
+          <option value="InnovateTech Seminar" data-fee="200">InnovateTech Seminar (₹200)</option>
+          <option value="TechFest 2025" data-fee="400">TechFest 2025 (₹400)</option>
+        </select>
+      </label>
+      <label>Number of Participants
+        <input type="number" id="participants" min="1" value="1" required>
+      </label>
+      <button type="submit">Calculate</button>
+    </form>
+    <p id="totalFee"></p>
+     </div>
+     </section>
+    
+  </main>
+  <footer>
+    <p>&copy; 2025 EventSync</p>
+  </footer>
+
+  <!-- calculator.js -->
+  <script>
+    document.getElementById('calcForm').addEventListener('submit', function(e){
+      e.preventDefault();
+      const selected = document.querySelector('#calcEvent option:checked');
+      const fee = Number(selected.getAttribute('data-fee'));
+      const qty = Number(document.getElementById('participants').value);
+      const total = fee * qty;
+      document.getElementById('totalFee').textContent = 'Total Payable Amount: ₹' + total;
+    });
+  </script>
+</body>
+</html>
